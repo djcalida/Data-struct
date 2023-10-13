@@ -33,18 +33,18 @@ public class BasicArrayOperations {
                 case 1:
                     System.out.print("Enter the element to insert at the beginning: ");
                     int firstElement = scanner.nextInt();
-                    myArray.add(0, firstElement);
+                    myArray.add(0, firstElement); //Enable to insert a new number in the beginning of array lists because of the add() method...
                     break;
                 case 2:
                     System.out.print("Enter the element to insert at the end: ");
                     int lastElement = scanner.nextInt();
-                    myArray.add(lastElement);
+                    myArray.add(lastElement); //Enable to insert a new number in the very last of array lists because of the add() method...
                     break;
                 case 3:
                     System.out.print("Enter the position to delete an element: ");
                     int positionToDelete = scanner.nextInt();
-                    if (positionToDelete >= 0 && positionToDelete < myArray.size()) {
-                        myArray.remove(positionToDelete);
+                    if (positionToDelete >= 0 && positionToDelete < myArray.size()) {//size() method
+                        myArray.remove(positionToDelete); //Enable to remove or delete a new number in the array lists because of the remove() method...
                     } else {
                         System.out.println("\nInvalid position.");
                     }
@@ -52,7 +52,7 @@ public class BasicArrayOperations {
                 case 4:
                     System.out.print("Enter the element to search for: ");
                     int elementToSearch = scanner.nextInt();
-                    int indexOfElement = myArray.indexOf(elementToSearch);
+                    int indexOfElement = myArray.indexOf(elementToSearch); //Enable to search what is the assigned number in the index or the list of the array, because of the indexOf() method...
                     if (indexOfElement != -1) {
                         System.out.println("The element " + elementToSearch + " is at index " + indexOfElement);
                     } else {
@@ -65,16 +65,16 @@ public class BasicArrayOperations {
                     if (positionToUpdate >= 0 && positionToUpdate < myArray.size()) {
                         System.out.print("Enter the new value: ");
                         int newElementValue = scanner.nextInt();
-                        myArray.set(positionToUpdate, newElementValue);
+                        myArray.set(positionToUpdate, newElementValue); // Enable to update a number in the index because of the set() method...
                     } else {
                         System.out.println("Invalid position. Update failed.");
                     }
                     break;
                 case 6:
-                    System.out.println("\nArray: " + myArray);
+                    System.out.println("\nFinal Array: " + myArray); //print the lists of array being updated...
                     break;
                 case 7:
-                    System.out.println("Exiting");
+                    System.out.println("Exiting"); // exit the program....
                     scanner.close();
                     System.exit(0);
                 default:
